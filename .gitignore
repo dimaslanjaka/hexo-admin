@@ -5,3 +5,4 @@ docs/demo/admin/bundle.js
 public
 db.json
 *.swp
+tmp
