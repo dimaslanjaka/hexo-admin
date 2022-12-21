@@ -21,7 +21,7 @@ if (passwordProtected) {
 
 }
 
-hexo.extend.filter.register('server_middleware', function(app) {
+hexo.extend.filter.register('server_middleware', function (app) {
 
   if (passwordProtected) {
     require('./auth')(app, hexo);   // setup authentication, login page, etc.
@@ -29,7 +29,7 @@ hexo.extend.filter.register('server_middleware', function(app) {
 
   // Main routes
   app.use(hexo.config.root + 'admin/', serveStatic(path.join(__dirname, 'www')));
-  app.use(hexo.config.root + 'admin/api/', bodyParser.json({limit: '50mb'}));
+  app.use(hexo.config.root + 'admin/api/', bodyParser.json({ limit: '50mb' }));
 
   // setup the json api endpoints
   api(app, hexo);
